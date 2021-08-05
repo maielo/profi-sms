@@ -1,5 +1,5 @@
-import request from 'request';
 import md5 from 'md5';
+import fetch from 'node-fetch';
 
 export type ProfiSmsConstructor = {
   login: string;
@@ -69,19 +69,8 @@ export default class ProfiSms {
 
     const queryString = new URLSearchParams(_config).toString();
 
-    return new Promise((resolve, reject) => {
-      request(
-        `https://api.profisms.cz/index.php?${queryString}`,
-        { json: true },
-        // @ts-ignore
-        (err, res, body) => {
-          if (err && body.error) {
-            return reject(body.error);
-          }
-
-          return resolve(body);
-        }
-      );
-    });
+    return fetch(`https://api.profisms.cz/index.php?${queryString}`).then(res =>
+      res.json()
+    );
   }
 }
