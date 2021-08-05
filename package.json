@@ -1,6 +1,6 @@
 {
   "name": "profi-sms",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "profi-sms node.js client for easier use",
   "main": "dist/index.js",
   "scripts": {
