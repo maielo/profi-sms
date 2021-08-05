@@ -1,6 +1,6 @@
 ## profi-sms
 
-- node-js client for [profisms.cz](https://profisms.cz/)
+- node.js client for [profisms.cz](https://profisms.cz/)
   - normalizing phone number strings
   - handling authentication
 - documentation http://document.profisms.cz/
@@ -8,7 +8,10 @@
 #### Usage
 
 ```
-import ProfiSms from "profi-sms";
+// commonJS
+const ProfiSms = require('profi-sms').default;
+// ES6 modules
+import ProfiSms from 'profi-sms';
 
 const sms = new ProfiSms({
     login: 'myLogin',
