@@ -1,0 +1,54 @@
+{
+  "name": "profi-sms",
+  "version": "1.0.0",
+  "description": "profi-sms node js wrapper for easier use",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "npx tsdx watch --onSuccess \"node ./dist/index.js\"",
+    "customtest": "npx nodemon test/test.js",
+    "build": "npx tsdx build --target node",
+    "lint": "npx tsdx lint",
+    "prepare": "npx tsdx build --target node",
+    "np:publish": "git push origin master && np --no-tests --no-2fa",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {},
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maielo/profi-sms.git"
+  },
+  "keywords": [
+    "ts",
+    "typescript",
+    "profi-sms",
+    "js",
+    "javascript",
+    "node.js"
+  ],
+  "author": "Maielo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maielo/profi-sms/issues"
+  },
+  "homepage": "https://github.com/maielo/profi-sms#readme",
+  "dependencies": {
+    "md5": "^2.3.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "@types/md5": "^2.3.1",
+    "@types/request": "^2.48.7",
+    "@size-limit/preset-small-lib": "^4.10.2",
+    "nodemon": "^2.0.7",
+    "npm": "^7.8.0",
+    "size-limit": "^4.10.2",
+    "tsdx": "^0.14.1"
+  }
+}
